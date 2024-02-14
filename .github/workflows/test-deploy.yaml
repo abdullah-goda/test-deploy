@@ -1,5 +1,6 @@
 name: Testing, Build & Deploy
 on:
+  push:
   workflow_dispatch:
     # branches:
     #   - Testing-manual-deploy
@@ -12,4 +13,4 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/actions-checkout@v3
+        uses: actions/actions-checkout@v4
