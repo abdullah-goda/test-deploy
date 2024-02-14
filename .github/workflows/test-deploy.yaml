@@ -1,8 +1,8 @@
 name: Testing, Build & Deploy
 on:
   workflow_dispatch:
-    # branches:
-    #   - Testing-manual-deploy
+
+      
 
 jobs:
   test:
