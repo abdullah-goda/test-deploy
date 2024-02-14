@@ -1,0 +1,13 @@
+name: Testing, Build & Deploy
+on:
+  workflow_dispatch:
+    # branches:
+    #   - Testing-manual-deploy
+
+jobs:
+  test:
+    runs-on: ubuntu:latest
+
+    steps:
+      - name: Checkout code
+        uses: VFDE-DT/actions-checkout@v3
