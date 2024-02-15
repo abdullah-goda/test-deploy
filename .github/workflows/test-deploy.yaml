@@ -1,16 +1,19 @@
 name: Testing, Build & Deploy
 on:
-  push:
   workflow_dispatch:
-    # branches:
-    #   - Testing-manual-deploy
+        inputs:
+          force-deploy:
+            type: string
+            required: true
+
+
+      
 
 jobs:
   test:
-    runs-on: ubuntu-latest
-
-
+    if:  github.ref == 'refs/heads/develop' || github.event.inputs.force-deploy == 'true' 
+    runs-on: ubuntu:latest
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v4
+        uses: VFDE-DT/actions-checkout@v3
