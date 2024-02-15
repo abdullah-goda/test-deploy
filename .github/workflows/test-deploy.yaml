@@ -8,7 +8,7 @@ on:
           force-deploy:
             type: string
             required: true
-            default: false
+            # default: false
 
 
 
@@ -17,7 +17,7 @@ on:
 jobs:
   test:
 
-    if:  github.ref == 'refs/heads/develop' ||  github.event.inputs.force-deploy == true
+    if:  github.ref == 'refs/heads/develop' ||  github.event.inputs.force-deploy == 'true'
 
     runs-on: ubuntu-latest
 
