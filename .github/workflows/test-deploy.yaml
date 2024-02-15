@@ -6,7 +6,7 @@ on:
 
         inputs:
           force-deploy:
-            type: boolean
+            type: string
             required: true
             default: false
 
@@ -17,7 +17,7 @@ on:
 jobs:
   test:
 
-    if:  github.ref == 'refs/heads/develop' ||  github.event.inputs.force-deploy
+    if:  github.ref == 'refs/heads/develop' ||  github.event.inputs.force-deploy == true
 
     runs-on: ubuntu-latest
 
