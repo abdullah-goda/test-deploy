@@ -8,7 +8,7 @@ on:
           force-deploy:
             type: boolean
             required: true
-            # default: false
+            default: false
 
 
 
