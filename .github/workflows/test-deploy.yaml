@@ -12,8 +12,8 @@ on:
 jobs:
   test:
     if:  github.ref == 'refs/heads/develop' || github.event.inputs.force-deploy == 'true' 
-    runs-on: ubuntu-latest
+    runs-on: ubuntu:latest
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v4
+        uses: VFDE-DT/actions-checkout@v3
