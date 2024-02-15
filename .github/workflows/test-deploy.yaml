@@ -1,19 +1,25 @@
 
 name: Testing, Build & Deploy
+
 on:
   push:
   workflow_dispatch:
+
         inputs:
           force-deploy:
             type: string
             required: true
+            # default: false
+
 
 
       
 
 jobs:
   test:
-    if:  github.ref == 'refs/heads/develop' || github.event.inputs.force-deploy == 'true' 
+
+    if:  github.ref == 'refs/heads/develop' ||  github.event.inputs.force-deploy == 'true'
+
     runs-on: ubuntu-latest
 
     steps:
