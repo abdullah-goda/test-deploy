@@ -7,6 +7,7 @@ on:
         inputs:
           force-deploy:
             type: boolean
+            required: true
             # default: false
 
 
