@@ -17,7 +17,7 @@ on:
 jobs:
   test:
 
-    if:  github.ref == 'refs/heads/develop' ||  github.event.inputs.force-deploy == true
+    if:  github.ref == 'refs/heads/develop' ||  github.event.inputs.force-deploy
 
     runs-on: ubuntu-latest
 
